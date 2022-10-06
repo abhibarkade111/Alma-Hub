@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "922019415726",
+    "project_id": "alma-hub",
+    "storage_bucket": "alma-hub.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:922019415726:android:46083c3ec5e65ca48ccf3f",
+        "android_client_info": {
+          "package_name": "com.example.alma_hub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "922019415726-putv44b8eakqglpud877kfffgn72gk4q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxbLAMu9YusuRxe5LHhaKO-VlHXDfGgEg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "922019415726-putv44b8eakqglpud877kfffgn72gk4q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
