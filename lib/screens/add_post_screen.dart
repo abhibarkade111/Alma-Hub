@@ -32,12 +32,13 @@ class _AddPostScreenState extends State<AddPostScreen> {
           _descriptionController.text, _file!, uid, username, profImage);
       if (res == "success") {
         setState(() {
-        _isLoading = false;
+          _isLoading = false;
         });
         showSnakBar('Posted!', context);
+        clearImage();
       } else {
         setState(() {
-        _isLoading = false;
+          _isLoading = false;
         });
         showSnakBar(res, context);
       }
@@ -91,6 +92,12 @@ class _AddPostScreenState extends State<AddPostScreen> {
         });
   }
 
+  void clearImage() {
+    setState(() {
+      _file = null;
+    });
+  }
+
   @override
   void dispose() {
     super.dispose();
@@ -113,7 +120,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
               backgroundColor: mobileBackgroundColor,
               leading: IconButton(
                 icon: const Icon(Icons.arrow_back),
-                onPressed: () {},
+                onPressed: clearImage,
               ),
               title: const Text('Post to'),
               centerTitle: false,
@@ -131,11 +138,14 @@ class _AddPostScreenState extends State<AddPostScreen> {
                 )
               ],
             ),
-            body: Column(
-              children: [
-                _isLoading?const LinearProgressIndicator()
-                :Padding(padding: EdgeInsets.only(top:0),),
-                Row(
+            body: Column(children: [
+              _isLoading
+                  ? const LinearProgressIndicator()
+                  : const Padding(
+                      padding: EdgeInsets.only(top: 0),
+                    ),
+              const Divider(),
+              Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
