@@ -161,7 +161,9 @@ class _PostCardState extends State<PostCard> {
               IconButton(
                 onPressed: () =>Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context)=>CommentScreen(),
+                    builder: (context)=>CommentScreen(
+                      snap : widget.snap,
+                    ),
                   ),
                 ),
                 icon: const Icon(
@@ -174,15 +176,15 @@ class _PostCardState extends State<PostCard> {
                   Icons.share,
                 ),
               ),
-              Expanded(
-                child: Align(
-                  alignment: Alignment.bottomRight,
-                  child: IconButton(
-                    icon: const Icon(Icons.bookmark_border),
-                    onPressed: () {},
-                  ),
-                ),
-              ),
+              // Expanded(
+              //   child: Align(
+              //     alignment: Alignment.bottomRight,
+              //     child: IconButton(
+              //       icon: const Icon(Icons.bookmark_border),
+              //       onPressed: () {},
+              //     ),
+              //   ),
+              // ),
             ],
           ),
 
