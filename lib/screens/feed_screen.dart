@@ -16,7 +16,7 @@ class FeedScreen extends StatelessWidget {
         title: SvgPicture.asset(
           'assets/alma_logo.svg',
           color: primaryColor,
-          height: 32,
+          height: 45,
         ),
         actions: [
           IconButton(
